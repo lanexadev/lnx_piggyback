@@ -64,7 +64,7 @@ local function lnxevent(eventname, func)
 end
 
 lnxevent("cmg2_animations:sync", function(animationLib, animation, animation2, distans, distans2, height, targetSrc, length, spin, controlFlagSrc, controlFlagTarget, animFlagTarget)
-	if targetSrc ~= -1 then
+	if targetSrc == -1 then
 		DropPlayer(_src, "pk t'essaye d'exploit avec le /porter")
 	else
 		TriggerClientEvent('cmg2_animations:syncTarget', targetSrc, source, animationLib, animation2, distans, distans2, height, length, spin, controlFlagTarget, animFlagTarget)
